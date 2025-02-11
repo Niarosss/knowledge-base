@@ -1,0 +1,101 @@
+.close-btn {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  font: 0/0 a;
+  position: absolute;
+  top: var(--vspace-1);
+  right: var(--vspace-1);
+  padding: 5px;
+  cursor: pointer;
+
+  & span::after,
+  & span::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-text-l);
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transition: background-color 0.3s linear;
+  }
+
+  & span::before {
+    transform: rotate(-45deg);
+  }
+
+  & span::after {
+    transform: rotate(45deg);
+  }
+
+  &:hover span::before,
+  &:hover span::after {
+    background-color: var(--color-1-dark);
+  }
+}
+
+.btn {
+  --btn-height: var(--vspace-btn);
+  display: inline-block;
+  font-family: var(--font-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  height: var(--btn-height);
+  line-height: calc(var(--btn-height) - 4px);
+  padding: 0 2rem;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  border-radius: var(--border-radius);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-btn-hover);
+    border-color: var(--color-btn-hover);
+    color: var(--color-btn-hover-text);
+    outline: 0;
+  }
+
+  &.btn--primary {
+    background: var(--color-btn-primary);
+    border-color: var(--color-btn-primary);
+    color: var(--color-btn-primary-text);
+
+    &:focus,
+    &:hover {
+      background: var(--color-btn-primary-hover);
+      border-color: var(--color-btn-primary-hover);
+      color: var(--color-btn-primary-hover-text);
+    }
+  }
+
+  &.btn--mail {
+    --btn-height: var(--btn-input-height);
+    border: 2px solid var(--color-1);
+    color: #fff;
+    background: transparent;
+    margin: 0;
+    font-size: var(--text-xs);
+
+    &:focus,
+    &:hover {
+      background-color: var(--color-1) !important;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .btn--mail {
+    width: 100%;
+    margin-bottom: var(--vspace-2_5);
+  }
+}

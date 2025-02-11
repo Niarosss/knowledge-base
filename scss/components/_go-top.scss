@@ -1,0 +1,50 @@
+.ss-go-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 200%);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(1.5 * var(--space));
+  width: calc(1.5 * var(--space));
+  border-radius: var(--border-radius);
+  background-color: var(--color-pic);
+
+  &.link-is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+
+  & svg {
+    height: var(--vspace-1);
+    width: var(--vspace-1);
+    fill: #fff;
+    animation: topp linear 1.5s infinite paused;
+  }
+  &:hover svg {
+    animation-play-state: running;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ss-go-top {
+    right: var(--vspace-1);
+    bottom: var(--vspace-1_5);
+  }
+
+  .ss-go-top a {
+    height: var(--vspace-1_75);
+    width: var(--vspace-1_75);
+  }
+
+  .ss-go-top svg {
+    height: var(--vspace-0_625);
+    width: var(--vspace-0_625);
+  }
+}

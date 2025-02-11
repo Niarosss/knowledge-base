@@ -1,0 +1,212 @@
+.s-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  padding-top: 16px;
+
+  &__logo {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    line-height: 1;
+
+    @media screen and (min-width: $bp-tablet) {
+      left: 3rem;
+      top: 3rem;
+    }
+  }
+  &__logo img {
+    height: calc(1.2 * var(--space));
+    width: calc(1.2 * var(--space));
+    transition: transform 0.5s linear;
+
+    @media screen and (min-width: $bp-tablet) {
+      left: 3rem;
+      top: 3rem;
+      height: calc(1.4 * var(--space));
+      width: calc(1.4 * var(--space));
+    }
+  }
+  &__logo:hover img {
+    transform: rotate(20deg);
+    transition: all 0.5s linear;
+  }
+
+  &__menu-toggle {
+    display: flex;
+    justify-content: center;
+    height: calc(1.2 * var(--space));
+    width: calc(1.2 * var(--space));
+    border-radius: var(--border-radius);
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    line-height: 1;
+
+    @media screen and (min-width: $bp-tablet) {
+      top: 2.6rem;
+      right: 3rem;
+      height: calc(1.5 * var(--space));
+      width: calc(1.5 * var(--space));
+    }
+
+    &.opaque {
+      background-color: var(--color-pic);
+    }
+  }
+
+  &__menu-icon {
+    height: 1.5px;
+    width: 1.8rem;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    border-radius: 1px;
+    @media screen and (min-width: $bp-tablet) {
+      height: 1.6px;
+      width: 2.4rem;
+    }
+    &::after,
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      position: absolute;
+      left: 0;
+      border-radius: 1px;
+      transition: transform 0.5s linear;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      bottom: -0.8rem;
+    }
+  }
+
+  &__menu-toggle:hover &__menu-icon:before {
+    transform: translateX(0.3rem);
+  }
+
+  &__menu-toggle:hover &__menu-icon:after {
+    transform: translateX(-0.3rem);
+  }
+
+  &__nav {
+    background: var(--color-body);
+    padding: var(--vspace-0_75);
+    height: 100%;
+    border-left: 1px solid var(--color-border2);
+    width: 100%;
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    transform: translateX(100%);
+    overflow-y: auto;
+    transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 400px;
+      padding: var(--vspace-1) var(--vspace-0_75) var(--vspace-0_75)
+        var(--vspace-0_75);
+    }
+  }
+
+  &__nav-list {
+    list-style: none;
+    margin: var(--vspace-0_75) 0;
+    font-family: var(--font-1);
+    font-size: 1.5rem;
+    line-height: 1;
+    flex: auto;
+    overflow: auto;
+
+    & li:not(:last-child) {
+      border-bottom: 1px solid rgb(121 121 121 / 21%);
+    }
+    & li a {
+      display: block;
+      padding: var(--vspace-0_25) 0;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+  }
+
+  &__nav-buttons {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    position: relative;
+    background-color: var(--color-bt);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border2);
+
+    & li {
+      padding-left: 0;
+      width: 50%;
+    }
+
+    & li:hover {
+      background-color: var(--color-hov);
+    }
+
+    & li:last-child {
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+
+    & li:first-child {
+      border-right: 1px solid var(--color-border2);
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+    }
+
+    & li svg {
+      animation: anime linear 9s infinite paused;
+      fill: var(--color-text-l);
+      transition: all 0.3s linear;
+    }
+
+    & li:hover svg,
+    & li:hover svg {
+      animation-play-state: running;
+      fill: var(--color-1-dark);
+    }
+  }
+
+  &__nav-button {
+    display: flex;
+    font-size: 0.7em;
+    padding: var(--vspace-0_375) var(--vspace-0_125);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+  }
+
+  &__nav-button svg {
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+  }
+}
+
+.menu-is-open .s-header__nav {
+  transform: translateX(0);
+  visibility: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+// fix search ctrl+F
+body:not(.menu-is-open) .s-header__nav-list {
+  display: none;
+}

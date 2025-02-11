@@ -1,0 +1,72 @@
+[aria-label]:before {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+}
+
+[aria-label]:hover:before {
+  content: attr(aria-label);
+  border: 1px solid var(--color-border2);
+  background-color: var(--color-body2);
+  font-size: var(--text-xs);
+  position: absolute;
+  width: max-content;
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.s-header__logo[aria-label]:hover:before {
+  left: 5rem;
+  padding: 6px;
+  top: 20%;
+}
+
+.s-header__menu-toggle[aria-label]:hover:before {
+  padding: 6px;
+  right: 5rem;
+  top: 20%;
+}
+
+.s-header__nav-button[aria-label]:hover:before {
+  top: -4rem;
+  padding: 6px;
+  text-transform: none;
+}
+
+.settings[aria-label]:hover:before {
+  right: 0;
+}
+
+.feedback[aria-label]:hover:before {
+  left: 0;
+}
+
+.s-intro__social a[aria-label]:hover:before {
+  left: 3rem;
+  padding: 6px;
+  top: -10%;
+}
+
+.close-mark[aria-label]:hover:before {
+  padding: 5px;
+  top: 0;
+  right: 3rem;
+  font: message-box;
+}
+
+.close-perc[aria-label]:hover:before {
+  font: message-box;
+  position: relative;
+  padding: 3px;
+  background-color: var(--color-body);
+  bottom: 1.5rem;
+  right: 7rem;
+}
+
+.ss-go-top[aria-label]:hover:before {
+  padding: 6px;
+  right: 6rem;
+}
