@@ -13,7 +13,12 @@ body.dark .s-intro__bg::before {
   position: relative;
 
   &__bg {
+    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -31,6 +36,15 @@ body.dark .s-intro__bg::before {
     }
 
     &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
       background: var(--color-gray-15);
       filter: brightness(0.8);
     }
@@ -114,14 +128,13 @@ body.dark .s-intro__bg::before {
       position: relative;
     }
 
-    & svg {
-      height: var(--vspace-0_7);
-      width: var(--vspace-0_7);
-      fill: #fff;
+    & span {
+      display: block;
+      color: #fff;
       transition: transform 0.3s linear;
     }
 
-    & a:hover svg {
+    & a:hover span {
       transform: scale(1.3);
       transition: all 0.3s linear;
     }
@@ -129,42 +142,38 @@ body.dark .s-intro__bg::before {
 
   &__scroll {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 3rem;
+    right: 4.4rem;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     -webkit-transform-origin: right top 0;
     -ms-transform-origin: right top 0;
     transform-origin: right top 0;
-  }
 
-  &__scroll-element {
-    display: flex;
-    align-items: center;
-    font-family: montserrat-bold, sans-serif;
-    text-transform: uppercase;
-    color: #fff !important;
-    position: relative;
-    top: 36px;
-    right: 30px;
-    -webkit-animation: animate-it 3s ease infinite;
-    animation: animate-it 3s ease infinite;
-    user-select: none;
-  }
+    &-element {
+      display: flex;
+      align-items: center;
+      font-family: montserrat-bold, sans-serif;
+      text-transform: uppercase;
+      color: #fff !important;
+      position: relative;
+      -webkit-animation: animate-it 3s ease infinite;
+      animation: animate-it 3s ease infinite;
+      user-select: none;
+    }
 
-  &__scroll-element span {
-    font-family: var(--font-1);
-    font-size: calc(var(--text-size) * 0.6667);
-    line-height: 1;
-    letter-spacing: 0.3em;
-    margin-right: 1rem;
-  }
+    &-text {
+      font-family: var(--font-1);
+      font-size: calc(var(--text-size) * 0.6667);
+      line-height: 1;
+      letter-spacing: 0.3em;
+      margin-right: 1rem;
+    }
 
-  &__scroll-element svg {
-    height: var(--vspace-0_7);
-    width: var(--vspace-0_7);
-    fill: #fff;
+    &-icon {
+      font-size: 20px;
+    }
   }
 }
 
@@ -225,6 +234,9 @@ body.dark .s-intro__bg::before {
   .s-intro__title br {
     display: none;
   }
+  .s-intro__scroll {
+    right: 3.6rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -249,11 +261,11 @@ body.dark .s-intro__bg::before {
   }
 
   .s-intro__social {
-    left: 3.6rem;
+    left: 3.2rem;
   }
 
-  .s-intro__scroll-element {
-    right: 5.4rem;
+  .s-intro__scroll {
+    right: 3.4rem;
   }
 }
 
@@ -270,6 +282,9 @@ body.dark .s-intro__bg::before {
   .s-intro__title {
     --text-multiplier: 0.45;
   }
+  .s-intro__scroll {
+    right: 3.2rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -280,9 +295,5 @@ body.dark .s-intro__bg::before {
 
   .s-intro__social {
     left: 2.8rem;
-  }
-
-  .s-intro__scroll-element {
-    right: 4.6rem;
   }
 }

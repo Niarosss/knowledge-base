@@ -1,0 +1,26 @@
+#preloader {
+  position: fixed;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-preloader-bg);
+  z-index: 500;
+  height: 100vh;
+  width: 100%;
+  opacity: 1;
+}
+
+.no-js #preloader {
+  display: none;
+}
+
+#loader {
+  width: var(--vspace-2);
+  height: var(--vspace-2);
+  padding: 0;
+  background-color: var(--color-loader);
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}

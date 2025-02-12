@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 300;
+  z-index: 3;
   padding-top: 16px;
 
   &__logo {
@@ -23,8 +23,6 @@
     transition: transform 0.5s linear;
 
     @media screen and (min-width: $bp-tablet) {
-      left: 3rem;
-      top: 3rem;
       height: calc(1.4 * var(--space));
       width: calc(1.4 * var(--space));
     }
@@ -170,14 +168,7 @@
       border-bottom-left-radius: var(--border-radius);
     }
 
-    & li svg {
-      animation: anime linear 9s infinite paused;
-      fill: var(--color-text-l);
-      transition: all 0.3s linear;
-    }
-
-    & li:hover svg,
-    & li:hover svg {
+    & li:hover .s-header__nav-icon {
       animation-play-state: running;
       fill: var(--color-1-dark);
     }
@@ -193,10 +184,9 @@
     line-height: 1;
   }
 
-  &__nav-button svg {
-    height: 24px;
-    width: 24px;
+  &__nav-icon {
     margin-right: 5px;
+    animation: anime linear 9s infinite paused;
   }
 }
 

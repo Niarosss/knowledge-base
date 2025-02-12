@@ -2,5 +2,86 @@
 
 :root {
   --font-1: 'Open Sans', sans-serif;
-  --font-mono: Consolas, 'Andale Mono', Courier, 'Courier New', monospace;
+}
+
+$icon-case: unquote('"\\e900"');
+$icon-email: unquote('"\\e901"');
+$icon-percent: unquote('"\\e902"');
+$icon-arrow: unquote('"\\e903"');
+$icon-arrow2: unquote('"\\e904"');
+$icon-settings: unquote('"\\e905"');
+$icon-validate: unquote('"\\e906"');
+$icon-write: unquote('"\\e907"');
+$icon-done: unquote('"\\e908"');
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.ttf?fl7kue') format('truetype'),
+    url('../fonts/icomoon.woff?fl7kue') format('woff'),
+    url('../fonts/icomoon.svg?fl7kue#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 22px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-case {
+  &:before {
+    content: $icon-case;
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email;
+  }
+}
+.icon-percent {
+  &:before {
+    content: $icon-percent;
+  }
+}
+.icon-arrow {
+  &:before {
+    content: $icon-arrow;
+  }
+}
+.icon-arrow2 {
+  &:before {
+    content: $icon-arrow2;
+  }
+}
+.icon-settings {
+  &:before {
+    content: $icon-settings;
+  }
+}
+.icon-validate {
+  &:before {
+    content: $icon-validate;
+  }
+}
+.icon-write {
+  &:before {
+    content: $icon-write;
+  }
+}
+.icon-done {
+  &:before {
+    content: $icon-done;
+  }
 }

@@ -2,6 +2,7 @@
   content: '';
   opacity: 0;
   visibility: hidden;
+  transition: opacity 1s ease-in-out;
 }
 
 [aria-label]:hover:before {
@@ -15,7 +16,6 @@
   border-radius: var(--border-radius);
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .s-header__logo[aria-label]:hover:before {
@@ -51,7 +51,7 @@
 }
 
 .close-mark[aria-label]:hover:before {
-  padding: 5px;
+  padding: 6px;
   top: 0;
   right: 3rem;
   font: message-box;
@@ -59,11 +59,10 @@
 
 .close-perc[aria-label]:hover:before {
   font: message-box;
-  position: relative;
-  padding: 3px;
+  padding: 6px;
   background-color: var(--color-body);
-  bottom: 1.5rem;
-  right: 7rem;
+  right: 4rem;
+  bottom: 0;
 }
 
 .ss-go-top[aria-label]:hover:before {

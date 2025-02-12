@@ -1,3 +1,18 @@
+.s-pagewrap {
+  --header-height: 7.2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.s-main {
+  padding-top: var(--vspace-4);
+  padding-bottom: var(--vspace-4);
+  position: relative;
+}
+
 .row {
   width: 92%;
   max-width: var(--width-grid-max);
