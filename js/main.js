@@ -21,7 +21,7 @@ function switchTheme(e) {
 }
 
 //Randow background image
-var dir = '../img/';
+var dir = './img/';
 const rand = Math.floor(Math.random() * 2) + 1;
 var images = new Array();
 (images[1] = 'bg_ny1.webp'), (images[2] = 'bg_ny2.webp');
