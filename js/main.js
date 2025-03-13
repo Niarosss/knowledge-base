@@ -22,9 +22,10 @@ function switchTheme(e) {
 
 //Randow background image
 var dir = './img/';
-const rand = Math.floor(Math.random() * 2) + 1;
-var images = new Array();
-(images[1] = 'bg_ny1.webp'), (images[2] = 'bg_ny2.webp');
+const rand = Math.floor(Math.random() * (3 - 0 + 1) + 0);
+var images = ['bg_1.webp', 'bg_2.webp', 'bg_3.webp', 'bg_4.webp'];
+//NY background -- "bg_ny1.webp", "bg_ny2.webp"
+
 document.querySelector('.s-intro__bg').style.backgroundImage =
   'url(' + dir + images[rand] + ')';
 
