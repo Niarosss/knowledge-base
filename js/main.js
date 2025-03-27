@@ -462,48 +462,6 @@ const quotes = [
                 t.classList.add('link-is-visible')
               : t.classList.remove('link-is-visible');
           }));
-      },
-      r = function () {
-        const e = document.querySelector('body'),
-          t = {
-            easeInQuad: function (e, t, n, o) {
-              return (e /= o), n * e * e + t;
-            },
-            easeOutQuad: function (e, t, n, o) {
-              return (e /= o), -n * e * (e - 2) + t;
-            },
-            easeInOutQuad: function (e, t, n, o) {
-              return (
-                (e /= o / 2),
-                e < 1 ? (n / 2) * e * e + t : (e--, (-n / 2) * (e * (e - 2) - 1) + t)
-              );
-            },
-            easeInOutCubic: function (e, t, n, o) {
-              return (
-                (e /= o / 2),
-                e < 1
-                  ? (n / 2) * e * e * e + t
-                  : ((e -= 2), (n / 2) * (e * e * e + 2) + t)
-              );
-            },
-          },
-          n = document.querySelectorAll('.smoothscroll'),
-          o = new MoveTo(
-            {
-              tolerance: 0,
-              duration: 1200,
-              easing: 'easeInOutCubic',
-              container: window,
-              callback: function (t) {
-                e.classList.contains('menu-is-open') &&
-                  e.classList.remove('menu-is-open');
-              },
-            },
-            t,
-          );
-        n.forEach(function (e) {
-          o.registerTrigger(e);
-        });
       };
-    n(), o(), s(), c(), i(), a(), l(), r();
+    n(), o(), s(), c(), i(), a(), l();
   })(document.documentElement);
