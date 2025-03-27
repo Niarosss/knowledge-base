@@ -44,17 +44,19 @@ function switchHigh(e) {
     : (localStorage.setItem('highlight', 'no'), (highToggle.checked = !1));
 }
 //Select text
-function selectText(e) {
-  if (highToggle.checked)
+function selectText(element) {
+  if (highToggle.checked) {
     if (document.selection) {
       var t = body.createTextRange();
-      t.moveToElementText(document.getElementById(e)), t.select();
+      t.moveToElementText(element);
+      t.select();
     } else if (window.getSelection) {
-      t = document.createRange();
-      t.selectNode(document.getElementById(e)),
-        window.getSelection().removeAllRanges(),
-        window.getSelection().addRange(t);
+      var t = document.createRange();
+      t.selectNode(element);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(t);
     }
+  }
 }
 //Get highlight text
 function getHighlight() {
