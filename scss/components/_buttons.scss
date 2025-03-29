@@ -90,12 +90,10 @@
       background-color: var(--color-1) !important;
       color: #000;
     }
-  }
-}
 
-@media screen and (max-width: 800px) {
-  .btn--mail {
-    width: 100%;
-    margin-bottom: var(--vspace-2_5);
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      margin-bottom: var(--vspace-2_5);
+    }
   }
 }
