@@ -228,66 +228,69 @@ faqQuestions.forEach(question => {
 });
 //Random quotes))
 const quotes = [
-    {
-      text: '«Практика без теорії цінніша, ніж теорія без практики»',
-      author: '- Марк Фабій Квінтиліан',
-    },
-    { text: '«Ціле опановують по частинах»', author: '- Сене́ка Анне́й Лу́цій' },
-    {
-      text: '«Робота роботою, але в цьому житті треба ще щось і корисне робити»',
-      author: '- Хенрік Ягодзіньскій',
-    },
-    {
-      text: '«Завжди не вистачає часу, щоб виконати роботу як треба, але на те, щоб її переробити, час знаходиться»',
-      author: '- закон Мескімена',
-    },
-    {
-      text: '«Ніколи не відкладай на завтра те, що можеш зробити післязавтра»',
-      author: '- Альфонс Аллі',
-    },
-    {
-      text: '«Хто вміє, той робить, а хто не вміє, той вчить»',
-      author: '- Бернард Шоу',
-    },
-    {
-      text: '«Думати – ось найважча робота, і тому мало хто за неї береться»',
-      author: '- Генрі Форд',
-    },
-    {
-      text: '«Стомлює не стільки сама праця, скільки думки про неї»',
-      author: '- Марк Фабій Квінтиліан',
-    },
-    {
-      text: '«Зробіть комусь послугу — і це стане вашою роботою»',
-      author: '- Закон Мерфі',
-    },
-    {
-      text: '«80% успіху — це з’явитися в потрібному місці в потрібний час»',
-      author: '- Вуді Аллен',
-    },
-    {
-      text: '«Краще тримати рот на замку і здатися дурнем, ніж заговорити і розвіяти всі сумніви»',
-      author: '- Марк Твен',
-    },
-    {
-      text: '«Краще тримати рот на замку і здатися дурнем, ніж заговорити і розвіяти всі сумніви»',
-      author: '- Марк Твен',
-    },
-    {
-      text: '«У всьому є баланс. Кількість енергії, яку ви отримуєте, дорівнює завданням, які потрібно виконати»',
-      author: '- Борис Пастернак',
-    },
-    { text: '«Не в грошах щастя, а в їхній кількості»', author: '- Михайло Генін' },
-    {
-      text: '«Людині не потрібно нічого понад те, що їй дала природа. Окрім грошей»',
-      author: '- Юзеф Бестер',
-    },
-    {
-      text: '«Є тільки один спосіб уникнути критики: нічого не робіть, нічого не говоріть і будьте ніким»',
-      author: '- Арісто́тель',
-    },
-  ],
-  quote = quotes[Math.floor(Math.random() * quotes.length)];
+  {
+    text: '"Practice without theory is more valuable than theory without practice."',
+    author: '- Marcus Fabius Quintilian',
+  },
+  {
+    text: '"You master the whole by learning its parts."',
+    author: '- Seneca the Younger',
+  },
+  {
+    text: '"Work is work, but in this life, we should do something useful too."',
+    author: '- Henryk Jagodzinski',
+  },
+  {
+    text: '"There’s never time to do it right, but always time to do it over."',
+    author: '- Meskimen’s Law',
+  },
+  {
+    text: '"Never put off till tomorrow what you can do the day after tomorrow."',
+    author: '- Alphonse Allais',
+  },
+  {
+    text: '"Those who can, do. Those who can’t, teach."',
+    author: '- George Bernard Shaw',
+  },
+  {
+    text: '"Thinking is the hardest work there is, which is probably why so few engage in it."',
+    author: '- Henry Ford',
+  },
+  {
+    text: '"It’s not the work itself that exhausts us, but the thought of it."',
+    author: '- Marcus Fabius Quintilian',
+  },
+  {
+    text: '"Do someone a favor, and it becomes your job."',
+    author: '- Murphy’s Law',
+  },
+  {
+    text: '"80% of success is showing up in the right place at the right time."',
+    author: '- Woody Allen',
+  },
+  {
+    text: '"It’s better to keep your mouth shut and appear stupid than to open it and remove all doubt."',
+    author: '- Mark Twain',
+  },
+  {
+    text: '"There is balance in everything. The energy you get equals the tasks you must do."',
+    author: '- Boris Pasternak',
+  },
+  {
+    text: '"Happiness isn’t in money — it’s in how much of it you have."',
+    author: '- Mikhail Genin',
+  },
+  {
+    text: '"A person needs nothing more than what nature gave them — except money."',
+    author: '- Józef Bester',
+  },
+  {
+    text: '"There is only one way to avoid criticism: do nothing, say nothing, and be nothing."',
+    author: '- Aristotle',
+  },
+];
+
+quote = quotes[Math.floor(Math.random() * quotes.length)];
 (document.getElementById('bes').innerHTML = quote.text),
   (document.getElementById('tes').innerHTML = quote.author),
   //Preloader and other stuff
