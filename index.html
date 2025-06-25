@@ -23,16 +23,16 @@
         <a class="s-header__logo" href="#" aria-label="Main site" target="_blank">
           <img src="./img/logo.svg" alt="Logo" />
         </a>
-        <a class="s-header__menu-toggle" href="#0" aria-label="Відкрити меню">
+        <a class="s-header__menu-toggle" href="#0" aria-label="Open menu">
           <span class="s-header__menu-icon"></span>
         </a>
         <nav class="s-header__nav">
-          <a href="#" class="close-btn close-mark" aria-label="Закрити">
-            <span>Закрити</span>
+          <a href="#" class="close-btn close-mark" aria-label="Close">
+            <span>Close</span>
           </a>
           <ul class="s-header__nav-list">
             <li>
-              <a href="#frequently-questions">Популярні запитання</a>
+              <a href="#frequently-questions">Popular questions</a>
             </li>
             <li>
               <a href="#link1">Lorem ipsum dolor sit amet consectetur</a>
@@ -58,28 +58,28 @@
               <a
                 href="#0"
                 class="feedback s-header__nav-button"
-                aria-label="Повідомити про помилку"
+                aria-label="Feedback"
               >
                 <span class="s-header__nav-icon icon-write"></span>
-                Повідомити
+                Feedback
               </a>
             </li>
             <li>
               <a
                 href="#0"
                 class="settings s-header__nav-button"
-                aria-label="Відкрити меню налаштування"
+                aria-label="Open settings menu"
               >
                 <span class="s-header__nav-icon icon-settings"></span>
-                Налаштування
+                Settings
               </a>
             </li>
           </ul>
         </nav>
         <div class="s-settings s-popup">
-          <h3 class="s-popup__header">Налаштування</h3>
-          <a class="close-btn close-mark" aria-label="Закрити">
-            <span>Закрити</span>
+          <h3 class="s-popup__header">Settings</h3>
+          <a class="close-btn close-mark" aria-label="Close">
+            <span>Close</span>
           </a>
 
           <div class="s-settings__block">
@@ -87,11 +87,11 @@
               <input type="checkbox" value="1" id="change-th" />
               <label for="change-th"></label>
             </p>
-            <p>Темна тема</p>
+            <p>Dark theme</p>
           </div>
           <p class="s-settings__info">
-            * За замовчуванням тема визначається автоматично, згідно налаштувань Вашої
-            системи.
+            * By default, the theme is determined automatically, according to your
+            settings systems.
           </p>
           <hr class="fancy" />
           <div class="s-settings__block">
@@ -99,10 +99,10 @@
               <input type="checkbox" value="1" id="high-tg" />
               <label for="high-tg"></label>
             </p>
-            <p>Авто-виділення тексту</p>
+            <p>Auto-highlight text</p>
           </div>
           <p class="s-settings__info">
-            * За замовчуванням автоматично виділяється шаблон після натискання ЛКМ.
+            * By default, a template is automatically selected after clicking LMB.
           </p>
           <hr class="fancy" />
           <div class="s-settings__block">
@@ -110,67 +110,63 @@
               <input type="checkbox" value="1" id="hide-tg" />
               <label for="hide-tg"></label>
             </p>
-            <p>Приховати вступ</p>
+            <p>Hide hero section</p>
           </div>
           <p class="s-settings__info">
-            * За замовчуванням вступ відображається. Якщо приховати, ви не будете
-            бачити зображення та цитатуту, одразу будуть відкриватись шаблони.
+            * By default, the introduction is displayed. If you hide, you will not to
+            see the image and quote, the templates will open immediately.
           </p>
         </div>
         <div class="s-feedback s-popup">
           <div class="column lg-12 tab-12">
-            <a href="#0" class="close-btn close-mark" aria-label="Закрити"
-              ><span>Закрити</span></a
+            <a href="#0" class="close-btn close-mark" aria-label="Close"
+              ><span>Close</span></a
             >
-            <h3>Повідомити</h3>
+            <h3>Feedback</h3>
             <form id="tg">
-              <label for="name">Ім'я</label>
+              <label for="name">Name</label>
               <input
                 class="u-fullwidth"
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Вкажіть Ваше ім'я"
+                placeholder="Enter your name"
                 required
                 autocomplete="given-name"
                 autofocus
               />
-              <label for="type">Тип звернення</label>
+              <label for="type">Type of appeal</label>
               <div class="s-select">
                 <select required class="u-fullwidth" id="type" name="type">
                   <option value="" disabled selected hidden>
-                    Оберіть тип звернення
+                    Select the type of request
                   </option>
-                  <option value="Додати шаблон">Додати шаблон</option>
-                  <option value="Повідомити про помилку">
-                    Повідомити про помилку
-                  </option>
-                  <option value="Вказати побажання">Вказати побажання</option>
+                  <option value="Add information">Add information</option>
+                  <option value="Error">Error</option>
+                  <option value="Desire">Desire</option>
                 </select>
               </div>
-              <label for="text">Повідомлення</label>
+              <label for="text">Message</label>
               <textarea
                 class="u-fullwidth"
-                placeholder="Вкажіть Ваше повідомлення"
+                placeholder="Enter your message"
                 id="text"
                 name="text"
                 required
               ></textarea>
               <div id="alert" class="alert-box" style="display: none"></div>
-              <button class="btn btn--primary u-fullwidth" type="submit">
-                Надіслати
-              </button>
+              <button class="btn btn--primary u-fullwidth" type="submit">Send</button>
             </form>
           </div>
         </div>
         <div class="s-percentage">
           <div class="column lg-12 tab-12">
-            <a href="#0" class="close-btn close-perc" aria-label="Закрити"
-              ><span>Закрити</span></a
+            <a href="#0" class="close-btn close-perc" aria-label="Close"
+              ><span>Close</span></a
             >
-            <h3>Калькулятор %</h3>
+            <h3>Calc %</h3>
             <div class="s-percentage__content">
-              <label for="yearp">Річний %:</label>
+              <label for="yearp">Year %:</label>
               <input
                 class="input-calc"
                 type="text"
@@ -179,7 +175,7 @@
                 onkeyup="AutoCalcYear(this)"
                 autocomplete="off"
               />
-              <label for="dayp">Денний %:</label>
+              <label for="dayp">Day %:</label>
               <input
                 class="input-calc"
                 type="text"
@@ -198,13 +194,13 @@
           </li>
           <li class="s-copy_success" style="display: none">
             <span class="icon-done"></span>
-            <span> Успішно скопійовано!</span>
+            <span> Copied successfully!</span>
           </li>
           <li class="s-copy_without-sign">
-            <span>Копіювати</span>
+            <span>Copy</span>
           </li>
           <li class="s-copy_with-sign">
-            <span>Копіювати з підписом</span>
+            <span>Copy with sign</span>
           </li>
         </ul>
       </header>
@@ -216,13 +212,13 @@
               <h2 id="bes" class="s-intro__title"></h2>
               <h4 id="tes" class="s-intro__pretitle"></h4>
               <div class="s-intro__more">
-                <a class="btn s-intro__more-btn" href="#main">До знань</a>
+                <a class="btn s-intro__more-btn" href="#main">To knowledge</a>
               </div>
             </div>
           </div>
           <ul class="s-intro__social">
             <li>
-              <a href="#" class="percent" aria-label="Калькулятор">
+              <a href="#" class="percent" aria-label="Calculate percent">
                 <span class="icon-percent"></span>
               </a>
             </li>
@@ -232,33 +228,79 @@
               </a>
             </li>
             <li>
-              <a
-                href="https://outlook.office.com/mail/inbox/"
-                aria-label="Пошта"
-                target="_blank"
-              >
+              <a href="#" aria-label="Mail" target="_blank">
                 <span class="icon-email"></span>
               </a>
             </li>
             <li>
-              <a
-                href="https://ca.diia.gov.ua/verify"
-                aria-label="Перевірка підпису | ДІЯ"
-                target="_blank"
-              >
+              <a href="#" aria-label="Verify" target="_blank">
                 <span class="icon-validate"></span>
               </a>
             </li>
           </ul>
           <div class="s-intro__scroll">
             <a href="#main" class="s-intro__scroll-element">
-              <span class="s-intro__scroll-text">Гортай донизу </span>
+              <span class="s-intro__scroll-text">Scroll down </span>
               <span class="s-intro__scroll-icon icon-arrow"></span>
             </a>
           </div>
         </section>
         <section id="main" class="s-main row">
           <div class="lg-12 column">
+            <h4 id="link1" class="center">Popular questions</h4>
+            <ul class="faq__list">
+              <li class="faq__item slide-up">
+                <button class="faq__question js-faq-question">
+                  Lorem ipsum dolor sit amet consectetur?
+                  <span class="faq__icon"></span>
+                </button>
+                <div class="faq__answer js-faq-answer">
+                  <p class="faq__answer-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                    voluptatibus amet nesciunt quod excepturi. Voluptas, nam similique
+                    sint aut, autem eaque ipsum possimus incidunt temporibus
+                    distinctio aliquid. Iusto, quasi alias.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item slide-up">
+                <button class="faq__question js-faq-question">
+                  Quisquam voluptatibus amet?
+                  <span class="faq__icon"></span>
+                </button>
+                <div class="faq__answer js-faq-answer">
+                  <p class="faq__answer-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+                    voluptatibus amet nesciunt quod excepturi.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item slide-up">
+                <button class="faq__question js-faq-question">
+                  Voluptas, nam similique sint aut?
+                  <span class="faq__icon"></span>
+                </button>
+                <div class="faq__answer js-faq-answer">
+                  <p class="faq__answer-text">
+                    Voluptas, nam similique sint aut, autem eaque ipsum possimus
+                    incidunt temporibus distinctio aliquid. Iusto, quasi alias.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item slide-up">
+                <button class="faq__question js-faq-question">
+                  Id iste aspernatur est commodi velit iure?
+                  <span class="faq__icon"></span>
+                </button>
+                <div class="faq__answer js-faq-answer">
+                  <p class="faq__answer-text">
+                    Nihil explicabo consequatur qui necessitatibus non, ad quidem,
+                    quos tempore nostrum quo impedit!
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <hr />
             <h4 id="link1" class="center">
               Lorem ipsum dolor sit amet consectetur <ruby>new</ruby>
             </h4>
@@ -363,7 +405,7 @@
               data-animate-el=""
               style="opacity: 1; transform: translateY(0px)"
             >
-              <h5 class="with-top-line">Корисні посилання</h5>
+              <h5 class="with-top-line">Useful links</h5>
               <ul class="s-contact__list">
                 <li>
                   <a href="#">Quick link 1</a>
@@ -384,15 +426,15 @@
               data-animate-el=""
               style="opacity: 1; transform: translateY(0px)"
             >
-              <h5 class="with-top-line">Є побажання або знайдено помилку?</h5>
-              <a href="#0" class="feedback btn btn--mail">Повідомити</a>
+              <h5 class="with-top-line">Have a request or found an error?</h5>
+              <a href="#0" class="feedback btn btn--mail">Feedback</a>
             </div>
             <div
               class="column lg-4 mob-12 column md-4 stack-on-900 s-contact__block-number"
               data-animate-el=""
               style="opacity: 1; transform: translateY(0px)"
             >
-              <h5 class="with-top-line">Зворотній зв'язок</h5>
+              <h5 class="with-top-line">Contact me</h5>
               <ul class="s-contact__list">
                 <li><a href="http://t.me/Niaros">Niaros</a></li>
               </ul>
@@ -407,13 +449,13 @@
             <span>Powered by <a href="https://www.t.me/Niaros">Niaros</a></span>
           </div>
         </div>
-        <a class="ss-go-top" aria-label="До неба" href="#top">
+        <a class="ss-go-top" aria-label="Go top" href="#top">
           <span class="icon-arrow2"></span>
         </a>
       </footer>
     </div>
     <script src="./js/plugins.min.js"></script>
-    <script async src="./js/main.min.js"></script>
+    <script async src="./js/main.js"></script>
     <!-- <script src="./js/snowy.min.js"></script> -->
   </body>
 </html>

@@ -216,6 +216,16 @@ document.getElementById('tg').addEventListener('submit', function (e) {
         console.log('Завершена дія відправки повідомлення');
       });
 });
+
+const faqQuestions = document.querySelectorAll('.js-faq-question');
+
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    question.classList.toggle('active');
+    const answer = question.nextElementSibling;
+    answer.classList.toggle('open');
+  });
+});
 //Random quotes))
 const quotes = [
     {
