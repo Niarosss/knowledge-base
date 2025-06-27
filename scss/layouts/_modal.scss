@@ -75,7 +75,10 @@
     flex-direction: column;
   }
 }
-
+.close-perc {
+  top: 1rem;
+  right: 1rem;
+}
 .feedback-is-open .s-feedback,
 .percentage-is-open .s-percentage,
 .settings-is-open .s-settings {
