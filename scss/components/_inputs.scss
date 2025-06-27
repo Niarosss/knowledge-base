@@ -1,7 +1,6 @@
 .s-select,
 form,
 input,
-p,
 select,
 textarea,
 ul {
@@ -45,6 +44,7 @@ textarea {
     margin: 0;
     vertical-align: middle;
     line-height: var(--vspace-1);
+    outline: none;
   }
 
   & select option {

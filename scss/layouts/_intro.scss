@@ -11,6 +11,8 @@ body.dark .s-intro__bg::before {
   min-height: calc(20.5 * var(--space));
   overflow: hidden;
   position: relative;
+  background-size: cover;
+  background-position: center;
 
   &__bg {
     display: block;
