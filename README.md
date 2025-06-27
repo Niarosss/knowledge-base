@@ -6,7 +6,7 @@
 ### 📌 Overview
 This is a personal knowledge base rendered via a single HTML file (`index.html`). It contains categorized information, notes, and references. Works entirely in the browser — no build tools or backend required.
 
-### 🌐 Live Preview
+### 🌐 Live Demo
 👉 [GitHub Pages](https://niarosss.github.io/knowledge-base/)
 
 ---
@@ -29,7 +29,7 @@ This is a personal knowledge base rendered via a single HTML file (`index.html`)
 ### 📌 Опис
 Це особиста база знань, реалізована як один HTML-файл (`index.html`). Вона містить тематичні записи, нотатки та посилання. Працює повністю у браузері — не потребує серверу чи збірки.
 
-### 🌐 Онлайн-доступ
+### 🌐 Онлайн-версія
 👉 [GitHub Pages](https://niarosss.github.io/knowledge-base/)
 
 ---
