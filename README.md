@@ -13,7 +13,7 @@ This is a personal knowledge base rendered via a single HTML file (`index.html`)
 ### 🧰 Technologies Used
 
 - **Languages**:
-  `HTML`, `CSS`, `JavaScript`
+  `HTML`, `SCSS`, `JavaScript`
 
 - **Libraries**:
   - [anime.js v3.2.1](https://animejs.com) — animations
@@ -36,7 +36,7 @@ This is a personal knowledge base rendered via a single HTML file (`index.html`)
 ### 🧰 Використані технології
 
 - **Мови**:
-  `HTML`, `CSS`, `JavaScript`
+  `HTML`, `SCSS`, `JavaScript`
 
 - **Бібліотеки**:
   - [anime.js v3.2.1](https://animejs.com) — анімації
