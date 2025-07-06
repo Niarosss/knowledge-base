@@ -1,4 +1,3 @@
-
 # Knowledge Base 📚
 
 ## 🇬🇧 English
@@ -13,14 +12,14 @@ This is a personal knowledge base rendered via a single HTML file (`index.html`)
 
 ### 🧰 Technologies Used
 
-- **Languages**:  
+- **Languages**:
   `HTML`, `CSS`, `JavaScript`
 
 - **Libraries**:
-  - [anime.js v3.2.1](https://animejs.com) — animations  
-  - [MoveTo](https://github.com/hsnaydd/moveTo) — smooth scrolling  
-  - [Rellax.js](https://dixonandmoe.com/rellax/) — parallax effects  
-  - [Snowy.js](https://snowyjs.lol/) — snow animation  
+  - [anime.js v3.2.1](https://animejs.com) — animations
+  - [MoveTo](https://github.com/hsnaydd/moveTo) — smooth scrolling
+  - [Rellax.js](https://dixonandmoe.com/rellax/) — parallax effects
+  - [Snowy.js](https://snowyjs.lol/) — snow animation
 
 ---
 
@@ -36,11 +35,11 @@ This is a personal knowledge base rendered via a single HTML file (`index.html`)
 
 ### 🧰 Використані технології
 
-- **Мови**:  
+- **Мови**:
   `HTML`, `CSS`, `JavaScript`
 
 - **Бібліотеки**:
-  - [anime.js v3.2.1](https://animejs.com) — анімації  
-  - [MoveTo](https://github.com/hsnaydd/moveTo) — плавний скрол  
-  - [Rellax.js](https://dixonandmoe.com/rellax/) — паралакс ефекти  
-  - [Snowy.js](https://snowyjs.lol/) — анімація снігу  
+  - [anime.js v3.2.1](https://animejs.com) — анімації
+  - [MoveTo](https://github.com/hsnaydd/moveTo) — плавний скрол
+  - [Rellax.js](https://dixonandmoe.com/rellax/) — паралакс ефекти
+  - [Snowy.js](https://snowyjs.lol/) — анімація снігу
