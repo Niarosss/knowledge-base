@@ -1,4 +1,4 @@
-
+[English](./README.md) | [Українська](./README.uk.md)
 # Knowledge Base 📚
 
 This repository contains a highly interactive and visually appealing personal knowledge base. It's designed as a single-page application that runs entirely in the browser, requiring no backend or build process for viewing.
