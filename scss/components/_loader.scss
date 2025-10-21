@@ -27,13 +27,12 @@
 
 .spinner {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: #ffffff;
   animation: spin 1s ease-in-out infinite;
-  margin-right: 5px;
   vertical-align: middle;
 }
 
