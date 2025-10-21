@@ -155,7 +155,18 @@
                 required
               ></textarea>
               <div id="alert" class="alert-box" style="display: none"></div>
-              <button class="btn btn--primary u-fullwidth" type="submit">Send</button>
+              <button
+                id="submit-button"
+                class="btn btn--primary u-fullwidth"
+                type="submit"
+              >
+                <span
+                  class="spinner"
+                  id="button-spinner"
+                  style="display: none"
+                ></span>
+                <span class="button-text">Send</span>
+              </button>
             </form>
           </div>
         </div>
