@@ -144,37 +144,74 @@ function AutoCalcDay(e) {
 // ------------------ Telegram Form ------------------ //
 const form = document.getElementById('tg');
 const alertBox = document.getElementById('alert');
+const VERCEL_API_ENDPOINT = ''; //Place API endpoint here
+const submitButton = document.getElementById('submit-button');
+const buttonSpinner = document.getElementById('button-spinner');
+const buttonText = submitButton.querySelector('.button-text');
+
+function hideAlert() {
+  alertBox.style.display = 'none';
+  alertBox.className = 'alert-box';
+  alertBox.innerHTML = '';
+}
+
+function setLoading(isLoading) {
+  submitButton.disabled = isLoading;
+
+  if (isLoading) {
+    buttonSpinner.style.display = 'inline-block';
+    buttonText.style.visibility = 'hidden';
+    submitButton.setAttribute('aria-busy', 'true');
+  } else {
+    buttonSpinner.style.display = 'none';
+    buttonText.style.visibility = 'visible';
+    submitButton.removeAttribute('aria-busy');
+  }
+}
+
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const token = 'TOKEN';
-    const chatId = 'ID';
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    const message = `
-<b>Message from Knowlage base</b>
-Name: ${form.name.value}
-Type: ${form.type.value}
-Message:
-${form.text.value}
-    `;
+    setLoading(true);
+
+    const formData = {
+      name: form.name.value,
+      type: form.type.value,
+      text: form.text.value,
+    };
+
+    hideAlert();
 
     try {
-      await axios.post(url, {
-        chat_id: chatId,
-        parse_mode: 'html',
-        text: message,
-      });
+      const response = await axios.post(VERCEL_API_ENDPOINT, formData);
 
-      form.reset();
-      alertBox.className = 'alert-box alert-box--success';
-      alertBox.innerHTML =
-        "<p>Message sent successfully. Thank you :3</p><span class='alert-box__close'></span>";
+      if (response.status === 200 && response.data.success) {
+        form.reset();
+        alertBox.className = 'alert-box alert-box--success';
+        alertBox.innerHTML =
+          "<p>Message sent successfully. Thank you :3</p><span class='alert-box__close'></span>";
+      } else {
+        alertBox.className = 'alert-box alert-box--error';
+        alertBox.innerHTML = `<p>Server error:<br>${
+          response.data.error || 'Unknown error'
+        }</p><span class='alert-box__close'></span>`;
+      }
     } catch (error) {
+      console.error('Error sending message:', error);
+      let errorMessage = 'Unknown error';
+      if (error.response && error.response.data && error.response.data.error) {
+        errorMessage = error.response.data.error;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
       alertBox.className = 'alert-box alert-box--error';
-      alertBox.innerHTML = `<p>Error:<br>${error}</p><span class='alert-box__close'></span>`;
+      alertBox.innerHTML = `<p>Error:<br>${errorMessage}</p><span class='alert-box__close'></span>`;
+    } finally {
+      alertBox.style.display = 'block';
+      setTimeout(hideAlert, 3000);
+      setLoading(false);
     }
-    alertBox.style.display = 'block';
   });
 }
 
