@@ -160,11 +160,11 @@ function setLoading(isLoading) {
 
   if (isLoading) {
     buttonSpinner.style.display = 'inline-block';
-    buttonText.style.visibility = 'hidden';
+    buttonText.style.display = 'none';
     submitButton.setAttribute('aria-busy', 'true');
   } else {
     buttonSpinner.style.display = 'none';
-    buttonText.style.visibility = 'visible';
+    buttonText.style.display = 'inline-block';
     submitButton.removeAttribute('aria-busy');
   }
 }
